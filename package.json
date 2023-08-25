@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "run:server": "json-server --watch db.json"
   },
   "author": "",
   "license": "ISC",
