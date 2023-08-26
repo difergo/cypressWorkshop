@@ -18,10 +18,10 @@ In client continer run the following:
 `mysql -h <idAddress> -u root -p` (password will be requested)
 Now, MySql commands can be used to set up and query the DB
 
-In order for the mysql library to be able to connect to this db, we have to set the following config through the mysql client:
-`ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY '<anypass>';`
-`flush privileges;`
-
+In order for the mysql library to be able to connect to this db, we have to set the following config through the mysql client:\
+`ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY '<anypass>';`\
+`flush privileges;`\
+\
 **tip**: clic `ctrl+c` followed by `ctrl+d` to detach from a container's bash, exit also works
 
 #### Set up PhpMyAdmin container to control the databes through UI
