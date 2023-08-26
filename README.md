@@ -6,7 +6,7 @@
 ### Set up mysql db using docker for db tests
 
 `docker pull mysql`\
-`docker run -e MYSQL_ROOT_PASSWORD=<pass> -d mysql` Set up server\
+`docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=<anypass> -d mysql` Set up server with default port for mysql being binded to the same port in the localhost\
 `docker run -it mysql /bin/bash` container to use as client\
 \
 On a different terminal `docker container ls` to list running containers\
@@ -17,6 +17,10 @@ Search the `IpAddress` field in the result > *This IpAddress will also be requir
 In client continer run the following:
 `mysql -h <idAddress> -u root -p` (password will be requested)
 Now, MySql commands can be used to set up and query the DB
+
+In order for the mysql library to be able to connect to this db, we have to set the following config through the mysql client:
+`ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY '<anypass>';`
+`flush privileges;`
 
 **tip**: clic `ctrl+c` followed by `ctrl+d` to detach from a container's bash, exit also works
 
