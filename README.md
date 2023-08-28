@@ -34,3 +34,10 @@ go to `http://localhost:8080/`
 
 Import `mysqldb.sql` in PhpMyAdmin
 
+### Set up MongoDB server using docker for tests
+
+run: `docker run -d -p 27017:27017 --name my_mongo_db mongo`\
+this will create an instance of mongoDb accessible from the localhost (Tests are already configured to point to the localhost)
+
+
+
